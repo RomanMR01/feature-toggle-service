@@ -29,7 +29,7 @@ public class FeatureToggleServiceImpl implements FeatureToggleService {
     @Override
     public FeatureToggle updateToggle(final FeatureToggle toggle) {
         final FeatureToggle byCode = repository.findByCode(toggle.getCode());
-        byCode.setState(toggle.getState());
+        byCode.setEnabled(toggle.isEnabled());
         return repository.save(byCode);
     }
 

@@ -3,6 +3,7 @@ package com.epam.feature.toggle.controller;
 import com.epam.feature.toggle.data.FeatureToggle;
 import com.epam.feature.toggle.service.FeatureToggleService;
 import lombok.RequiredArgsConstructor;
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -17,6 +18,7 @@ import java.util.List;
 @RestController
 @RequestMapping("/feature-toggle/v1")
 @RequiredArgsConstructor
+@CrossOrigin("*")
 public class FeatureToggleController {
 
     private final FeatureToggleService featureToggleService;
